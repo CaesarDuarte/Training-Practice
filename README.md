@@ -1,33 +1,72 @@
-# Repositório de Práticas de Ciência de Dados / Data Science Practice Repository
+# Práticas de Ciência de Dados / Data Science Practice
 
-Bem-vindo ao meu repositório de práticas de Ciência de Dados! Este repositório é destinado ao meu aprendizado contínuo em diversas áreas da ciência de dados, como estatística, machine learning, deep learning, processamento de linguagem natural (NLP) e visão computacional.
+Repositório pessoal de estudos em Ciência de Dados.
+Cada pasta reúne notebooks de prática organizados por tema, com pipelines comentados e exercícios.
 
-**Nota**: O idioma principal deste repositório é o **português**. Este repositório está em constante desenvolvimento e **pode sofrer alterações frequentes**.
-
-## Estrutura do Repositório
-
-Este repositório está organizado nas seguintes seções:
-
-- **Dados**: Inclui datasets, scripts de limpeza e transformação de dados, e técnicas de visualização.
-- **Estatística**: Contém práticas e estudos de estatística descritiva e inferencial.
-- **Machine Learning**: Implementações e estudos de algoritmos supervisionados e não supervisionados, validação de modelos e engenharia de features.
-- **Deep Learning**: Estudos e implementações de redes neurais convolucionais, recorrentes e técnicas de transfer learning.
-- **NLP**: Técnicas de pré-processamento de texto, modelagem de tópicos e word embeddings.
-- **Visão Computacional**: Técnicas de detecção de objetos, classificação e segmentação de imagens.
+> **Nota:** Idioma principal — **português**. Em desenvolvimento contínuo.
 
 ---
 
-Welcome to my Data Science Practice Repository! This repository is dedicated to my continuous learning in various areas of data science, such as statistics, machine learning, deep learning, natural language processing (NLP), and computer vision.
+## Estrutura
 
-**Note**: The main language of this repository is **Portuguese**. This repository is under constant development and **may undergo frequent changes**.
+```
+Training-Practice/
+│
+├── Dados/                        # EDA, limpeza, engenharia de features
+├── Estatistica/                  # Descritiva, inferencial, testes de hipótese
+├── Machine-Learning/             # Supervisionado, não supervisionado, validação
+├── Deep-Learning/                # Redes neurais com PyTorch (CPU)
+├── NLP/                          # Texto em português, embeddings semânticos
+├── Visao-Computacional/          # Transfer learning com PyTorch (CPU)
+│
+├── data/
+│   ├── raw/                      # Dados originais
+│   └── processed/                # Dados limpos / transformados
+│
+├── pixi.toml                     # Ambiente de dependências (Pixi)
+└── README.md
+```
 
-## Repository Structure
+---
 
-This repository is organized into the following sections:
+## Como rodar
 
-- **Data**: Includes datasets, data cleaning and transformation scripts, and visualization techniques.
-- **Statistics**: Contains practices and studies on descriptive and inferential statistics.
-- **Machine Learning**: Implementations and studies of supervised and unsupervised algorithms, model validation, and feature engineering.
-- **Deep Learning**: Studies and implementations of convolutional neural networks, recurrent neural networks, and transfer learning techniques.
-- **NLP**: Text preprocessing techniques, topic modeling, and word embeddings.
-- **Computer Vision**: Object detection, image classification, and segmentation techniques.
+O projeto usa **[Pixi](https://pixi.sh)** para gerenciar o ambiente.
+
+```bash
+# Instalar o ambiente
+pixi install
+
+# Baixar recursos de NLP em português (rodar uma vez)
+pixi run nltk-data
+pixi run spacy-pt
+
+# Abrir Jupyter Lab
+pixi run lab
+```
+
+---
+
+## Tópicos de Estudo
+
+### Dados
+Carregamento, inspeção, EDA, limpeza, transformação e feature engineering. Uso de DuckDB para consultas em arquivos maiores e salvamento em Parquet.
+
+### Estatística
+Estatística descritiva e inferencial: distribuições, testes de hipótese (t, Mann-Whitney, qui-quadrado), tamanho de efeito e intervalos de confiança.
+
+### Machine Learning
+Algoritmos supervisionados e não supervisionados com scikit-learn. Pipeline, validação cruzada, métricas e explicabilidade com SHAP.
+
+### Deep Learning
+Redes neurais com PyTorch: MLP, CNN, RNN. Loop de treino completo com curvas de aprendizado e avaliação.
+
+### NLP
+Pré-processamento em português (stopwords, stemming RSLP), TF-IDF e embeddings semânticos com `sentence-transformers`.
+
+### Visão Computacional
+Classificação de imagens com transfer learning (EfficientNet-B0). Data augmentation e fine-tuning progressivo.
+
+---
+
+**Principais pacotes:** Python 3.12 · pandas · scikit-learn · PyTorch · transformers · sentence-transformers · spaCy · DuckDB · Polars · SHAP
