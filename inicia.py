@@ -24,7 +24,7 @@ structure = [
 for folder in structure:
     os.makedirs(folder, exist_ok=True)
 
-# Criar um arquivo README.md em cada pasta principal
+# Cria um arquivo README.md em cada pasta principal
 main_folders = ["Dados", "Estatistica", "Machine-Learning", "Deep-Learning", "NLP", "Visao-Computacional"]
 for folder in main_folders:
     with open(os.path.join(folder, "README.md"), "w") as f:
