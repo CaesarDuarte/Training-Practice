@@ -1,0 +1,50 @@
+# ── Ambiente Pixi ─────────────────────────────────────────────
+.pixi/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Dados ─────────────────────────────────────────────────────
+# Não versionar dados brutos pesados - documente a fonte no notebook
+data/raw/
+data/processed/
+
+# Extensões comuns de dados - remova a linha se quiser versionar alguma
+*.csv
+*.parquet
+*.json
+*.xlsx
+*.zip
+*.tar.gz
+
+# ── Modelos treinados ─────────────────────────────────────────
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.h5
+
+# ── Cache de modelos HuggingFace / sentence-transformers ───────
+~/.cache/huggingface/
+.cache/
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# ── Windows ───────────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Variáveis de ambiente ─────────────────────────────────────
+.env
+.env.*
