@@ -1,0 +1,84 @@
+[project]
+name = "training-practice"
+version = "0.1.0"
+description = "Ambiente de treino: Data Science, Machine Learning, Deep Learning, NLP, Visão Computacional"
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+# ==============================================================
+# DEPENDÊNCIAS PRINCIPAIS
+# ==============================================================
+
+[dependencies]
+# --- Python ---
+python = "3.12.*"
+
+# --- Core científico ---
+numpy = ">=2.0"
+pandas = ">=2.2"
+scipy = ">=1.13"
+statsmodels = ">=0.14"
+
+# --- Visualização ---
+matplotlib = ">=3.9"
+seaborn = ">=0.13"
+plotly = ">=5.22"
+
+# --- Machine Learning ---
+scikit-learn = ">=1.5"
+xgboost = ">=2.1"
+lightgbm = ">=4.3"
+imbalanced-learn = ">=0.12"
+shap = ">=0.46"
+yellowbrick = ">=1.5"
+
+# --- Deep Learning (CPU) ---
+# pytorch-cpu resolve automaticamente a versão correta sem CUDA
+pytorch-cpu = ">=2.4"
+torchvision = ">=0.19"
+
+# --- NLP ---
+nltk = ">=3.9"
+spacy = ">=3.8"
+transformers = ">=4.44"
+
+# --- Engenharia de Dados ---
+pyarrow = ">=17.0"
+polars = ">=1.0"
+duckdb = ">=1.0"
+sqlalchemy = ">=2.0"
+
+# --- Notebooks & Dev ---
+jupyterlab = ">=4.2"
+ipywidgets = ">=8.1"
+tqdm = ">=4.66"
+ipykernel = ">=6.29"
+
+# --- Utilitários ---
+python-dotenv = ">=1.0"
+requests = ">=2.32"
+pyyaml = ">=6.0"
+
+# ==============================================================
+# DEPENDÊNCIAS VIA PIP (não disponíveis no conda-forge)
+# ==============================================================
+
+[pypi-dependencies]
+sentence-transformers = ">=5.5"
+
+# ==============================================================
+# TASKS — atalhos de linha de comando
+# ==============================================================
+
+[tasks]
+# Iniciar Jupyter Lab
+lab = "jupyter lab"
+
+# Baixar recursos do NLTK em português (roda uma vez após install)
+nltk-data = "python -c \"import nltk; nltk.download(['stopwords','punkt','punkt_tab','wordnet','rslp'])\""
+
+# Baixar modelo spaCy em português
+spacy-pt = "python -m spacy download pt_core_news_sm"
+
+# Verificar se o ambiente está OK
+check = "python -c \"import torch, sklearn, pandas, transformers; print('Ambiente OK')\""
